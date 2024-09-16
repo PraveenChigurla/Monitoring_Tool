@@ -1,0 +1,128 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Addresses with Start Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .ip-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .ip-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>AAAAAA : 10.10.10.10 : <button class="ip-button" onclick="startApplication('http://192.168.64.98:8501')">GO Ahead !!</button></div><br>
+        <div>BBBBBB : 20.20.20.20 : <button class="ip-button" onclick="startApplication('http://20.20.20.20:8501')">GO AHEAD !!</button></div><br>
+        <div>CCCCCC : 30.30.30.30 : <button class="ip-button" onclick="startApplication('http://30.30.30.30:8501')">Start</button></div><br>
+        <div>DDDDDD : 40.40.40.40 : <button class="ip-button" onclick="startApplication('http://40.40.40.40:8501')">Start</button></div><br>
+    </div>
+
+    <script>
+        function startApplication(url) {
+            // Open the Streamlit app in a new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Addresses with Start Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .ip-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .ip-button:hover {
+            background-color: darkred;
+        }
+    </style>
+    <script>
+        // Function to prompt for username and password
+        function authenticate() {
+            const username = prompt("Enter username:");
+            const password = prompt("Enter password:");
+
+            // Check credentials
+            if (username === "JARVIS" && password === "000000000") {
+                document.getElementById("main-content").style.display = "block"; // Show main content
+            } else {
+                alert("Access denied. Invalid credentials.");
+                window.location.href = "about:blank"; // Redirect to blank page if authentication fails
+            }
+        }
+
+        // Call authenticate on page load
+        window.onload = authenticate;
+    </script>
+</head>
+<body>
+    <div class="container" id="main-content" style="display: none;">
+        <div>AAAAAA : 10.10.10.10 : <button class="ip-button" onclick="startApplication('http://192.168.64.98:8501')">GO Ahead !!</button></div><br>
+        <div>BBBBBB : 20.20.20.20 : <button class="ip-button" onclick="startApplication('http://20.20.20.20:8501')">GO AHEAD !!</button></div><br>
+        <div>CCCCCC : 30.30.30.30 : <button class="ip-button" onclick="startApplication('http://30.30.30.30:8501')">Start</button></div><br>
+        <div>DDDDDD : 40.40.40.40 : <button class="ip-button" onclick="startApplication('http://40.40.40.40:5000')">Start</button></div><br>
+    </div>
+    
+    <script>
+        function startApplication(url) {
+            // Open the Streamlit app in a new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
